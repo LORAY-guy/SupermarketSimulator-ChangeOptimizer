@@ -15,7 +15,7 @@ When a customer pays with cash, the bottom of the register screen shows the idea
 ## Features
 
 ### Optimal change calculation
-Uses a greedy algorithm to compute the minimum number of coins/bills needed. Denominations supported (in cents): $50, $20, $10, $5, $1, 50¢, 25¢, 10¢, 5¢, 1¢.
+Uses a greedy algorithm to compute the minimum number of coins/bills needed.
 
 ### Live colour feedback
 Each denomination group is coloured based on what you've given so far:
