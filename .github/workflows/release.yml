@@ -1,0 +1,38 @@
+name: Build and Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup .NET 6.0
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '6.0.x'
+
+      # The .csproj references game DLLs via HintPath "..\dlls\" (one level up),
+      # so they must be copied to the parent directory before building.
+      - name: Copy game DLLs to parent directory
+        run: cp -r dlls ../
+
+      - name: Restore dependencies
+        run: dotnet restore
+
+      - name: Build
+        run: dotnet build --configuration Release --no-restore
+
+      - name: Upload DLL to Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: bin/Release/net6.0/ChangeOptimizer.dll
