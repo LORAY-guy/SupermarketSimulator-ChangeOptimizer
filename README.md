@@ -48,5 +48,5 @@ The config file is generated at `BepInEx/config/ChangeOptimizer.cfg` on first ru
 
 ## Installation
 
-1. Copy `ChangeOptimizer.dll` from `bin/Debug/net6.0/` into `BepInEx/plugins/`.
+1. Copy `ChangeOptimizer.dll` into `BepInEx/plugins/`.
 2. Launch the game.
