@@ -8,6 +8,9 @@ on:
 permissions:
   contents: write
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -21,8 +24,6 @@ jobs:
         with:
           dotnet-version: '6.0.x'
 
-      # The .csproj references game DLLs via HintPath "..\dlls\" (one level up),
-      # so they must be copied to the parent directory before building.
       - name: Copy game DLLs to parent directory
         run: cp -r dlls ../
 
