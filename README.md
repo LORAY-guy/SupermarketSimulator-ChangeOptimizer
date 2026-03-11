@@ -1,5 +1,7 @@
 # Change Optimizer
 
+[![Watch the video](https://img.youtube.com/vi/jas1nsWst6U/maxresdefault.jpg)](https://youtu.be/jas1nsWst6U)
+
 A BepInEx mod for **Supermarket Simulator** that adds a live optimal-change display to the in-game cash register screen, helping you give the right coins and bills quickly.
 
 ---
