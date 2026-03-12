@@ -41,6 +41,11 @@
     <Reference Include="Il2Cppmscorlib">
       <HintPath>..\dlls\Il2Cppmscorlib.dll</HintPath>
       <Private>false</Private>
+    </Reference>    <Reference Include="UnityEngine.ImageConversionModule">
+      <HintPath>.\dlls\UnityEngine.ImageConversionModule.dll</HintPath>
+      <Private>false</Private>
     </Reference>
+
+    <EmbeddedResource Include="assets\images\screen_lowres.png"/>
   </ItemGroup>
 </Project>

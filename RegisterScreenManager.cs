@@ -38,6 +38,7 @@ static class RegisterScreenManager
 
         CompressExistingChildren(canvas);
         _panels[id] = CreatePanel(canvas, regScreen);
+        LowResTexturePatcher.Apply(canvas);
         Plugin.Log.LogInfo("[ChangeOptimizer] Panel installed");
     }
 
